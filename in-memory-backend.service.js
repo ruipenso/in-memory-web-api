@@ -275,7 +275,7 @@ var InMemoryBackendService = (function () {
             return this.createErrorResponse(http_status_codes_1.STATUS.NOT_FOUND, "'" + collectionName + "' with id='" + id + "' not found");
         }
         return new http_1.ResponseOptions({
-            body: { data: this.clone(data) },
+            body: this.clone(data),
             headers: headers,
             status: http_status_codes_1.STATUS.OK
         });

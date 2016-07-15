@@ -346,7 +346,7 @@ export class InMemoryBackendService {
         `'${collectionName}' with id='${id}' not found`);
     }
     return new ResponseOptions({
-      body: { data: this.clone(data) },
+      body: this.clone(data),
       headers: headers,
       status: STATUS.OK
     });
